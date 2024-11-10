@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgb(77, 77, 77), rgb(50, 50, 50));
+    position: relative;
+}
+
+.name-links {
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(105, 144, 176);
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.name-links h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.name-links img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name-links .links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.links i {
+    font-size: 1.5rem;
+    background-color: #ADD8E6;
+    padding: 0.5rem;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.links i:hover {
+    background-color: #87CEEB;
+    transform: scale(1.1);
+}
+
+#email-copied {
+    display: none;
+    position: absolute;
+    top: 72%;
+    left: 32%;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    z-index: 2;
+}
+
+#email-copied::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.skills {
+    position: absolute;
+    top: 31%;
+    right: 0%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.skills p {
+    font-size: 1.2rem;
+    width: 70%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.slider-container {
+    width: 30%;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.slider {
+    text-align: center;
+    margin-top: 20px;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+.slide {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(221, 221, 221, 0.7);
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide:hover {
+    transform: scale(1.2);
+}
+
+.projects {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 90%;
+    height: 80%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: rgb(160, 190, 215);
+    box-shadow: 5px 5px 5px rgba(105, 144, 176, 0.5); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projects .projects-list {
+    display: flex;
+    transition: all 1s ease-in-out;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+    text-align: center;
+    flex: 0 0 100%;
+}
+
+.project .space-between {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 100%;
+    margin: 40px auto;
+}
+
+.project .space-between iframe {
+    width: 50%;
+    height: 70%;
+    border: none;
+    margin: 0 20px;
+}
+
+.project .space-between div {
+    width: 30%;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.project .space-between h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.project .space-between p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.projects-scroll {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-scroll div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+
+.projects-scroll .active {
+    width: 30px;
+    height: 5px;
+}
+
+.projects-scroll div:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-167%);
+    }
+}
